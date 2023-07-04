@@ -20,7 +20,7 @@ public class ArduinoController : MonoBehaviour
     // Wird aufgerufen, wenn das Spielobjekt aktiviert wird
     private void Start()
     {
-        arduinoComm = new ArduinoCommunication("10.12.18.15", 8888);
+        arduinoComm = new ArduinoCommunication("192.168.2.58", 8888);
         Debug.Log("Server startet:");
     }
 

@@ -11,12 +11,34 @@ public class ArduinoCommunication : IDisposable
     private bool isDisposed;
     private bool isReceiving;
 
-    // Konstruktor: initialisiert den UdpClient und die Arduino-Endpunktinformationen
+    // Konstruktor für IP-Adresse
     public ArduinoCommunication(string arduinoIPAddress, int arduinoPort)
     {
         udpClient = new UdpClient();
         arduinoEndpoint = new IPEndPoint(IPAddress.Parse(arduinoIPAddress), arduinoPort);
     }
+
+    // Konstruktor für Hostname
+    public ArduinoCommunication(int arduinoPort, string arduinoHostname)
+    {
+        udpClient = new UdpClient();
+        IPHostEntry hostEntry = Dns.GetHostEntry(arduinoHostname);
+        IPAddress ipAddress = null;
+        foreach (var address in hostEntry.AddressList)
+        {
+            if (address.AddressFamily == AddressFamily.InterNetwork) // IPv4 addresses only
+            {
+                ipAddress = address;
+                break;
+            }
+        }
+        if (ipAddress == null)
+        {
+            throw new Exception("Keine IPv4-Adresse für den Host gefunden");
+        }
+        arduinoEndpoint = new IPEndPoint(ipAddress, arduinoPort);
+    }
+
 
     // Sendet einen Befehl an das Arduino-Gerät und empfängt eine Antwort
     public void SendCommandToArduino(string command, Action<string> callback)

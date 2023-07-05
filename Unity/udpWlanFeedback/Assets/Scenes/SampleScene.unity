@@ -447,8 +447,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac6dcce996a620409691711b3ff651d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  connectionType: 0
+  arduinoIpAddress: 192.168.2.58
+  arduinoHostname: ArduinoNanoIoT
+  arduinoPort: 8888
   vibrationIntensity: 0
-  rebaScore: 0
+  rebaScore: 1
 --- !u!65 &1684591680
 BoxCollider:
   m_ObjectHideFlags: 0

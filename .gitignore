@@ -71,6 +71,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
+Unity/udpWlanFeedback/Temp/FSTimeGet*
 
 Unity/udpWlanFeedback/Temp/FSTimeGet-18bded9bd3956804b91f3efad2642381
 Unity/udpWlanFeedback/Temp/FSTimeGet-315dfaf6672ada340bf2a0c957b8e269

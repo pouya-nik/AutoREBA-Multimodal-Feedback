@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class ArduinoController : MonoBehaviour
 {
+    public enum ConnectionType
+    {
+        IPAddress,
+        Hostname
+    }
+
+    public ConnectionType connectionType;
+    public string arduinoIpAddress = "192.168.2.58";
+    public string arduinoHostname = "ArduinoNanoIoT";
+    public int arduinoPort = 8888;
+
     private ArduinoCommunication arduinoComm;
 
     // Vibrationsintensität, die an das Arduino-Gerät gesendet werden soll
@@ -20,7 +31,15 @@ public class ArduinoController : MonoBehaviour
     // Wird aufgerufen, wenn das Spielobjekt aktiviert wird
     private void Start()
     {
-        arduinoComm = new ArduinoCommunication("192.168.2.58", 8888);
+        switch (connectionType)
+        {
+            case ConnectionType.IPAddress:
+                arduinoComm = new ArduinoCommunication(arduinoIpAddress, arduinoPort);
+                break;
+            case ConnectionType.Hostname:
+                arduinoComm = new ArduinoCommunication(arduinoPort, arduinoHostname);
+                break;
+        }
         Debug.Log("Server startet:");
     }
 

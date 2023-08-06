@@ -57,4 +57,34 @@ Weitere spezifische Anweisungen und Informationen finden Sie in den jeweiligen U
 ## Lizenz
 
 Dieses Projekt ist unter der [MIT-Lizenz](https://opensource.org/licenses/MIT) lizenziert. Weitere Informationen finden Sie in der [`LICENSE`](LICENSE)-Datei.
-## Vibration
+## Taktiles Feedback
+### Vibration
+#### Überblick
+Dieses Skript ermöglicht es, dem Benutzer taktiles Feedback bezüglich seines REBA-Scores zu geben. Der REBA (Rapid Entire Body Assessment) Score ist eine ergonomische Analyse, und dieses System wandelt ihn in ein Vibrationssignal um, um dem Benutzer ein physisches Feedback zu geben.
+
+#### Funktionen
+Anpassbare Vibrationseinstellungen
+- Stufen: Der REBA-Score kann in 15 detaillierte oder 5 grobe Stufen eingeteilt werden.
+- Intensität: Wählbar zwischen niedriger, mittlerer und hoher Intensität.
+- Motoren: Verwendung von ein oder zwei Motoren für unterschiedliche Vibrationsstärken.
+#### Flexibilität
+Der Benutzer kann die Einstellungen je nach Bedarf anpassen, um ein optimales Feedback für seinen REBA-Score zu erhalten. Die Anpassungsfähigkeit ermöglicht es, die Vibration in feineren oder gröberen Schritten zu spüren und die Intensität oder die Anzahl der Motoren nach Bedarf zu ändern.
+
+#### Implementierung
+##### Verbindung
+Das Skript verwendet UDP, um Daten an einen Arduino zu senden, der die Vibration steuert. Die IP-Adresse und der Port können im Code konfiguriert werden.
+
+##### Vibration Arrays
+Es gibt mehrere Arrays, die die Vibrationsstärken für verschiedene Kombinationen von Einstellungen definieren.
+
+##### Steuerung und Timing
+Das Skript aktualisiert das Vibrationssignal in regelmäßigen Abständen (standardmäßig jede Sekunde) und sendet die Daten über UDP.
+
+##### Verwendung
+Fügen Sie das Skript einer Unity-Komponente hinzu und konfigurieren Sie die Einstellungen im Inspektor oder im Code. Starten Sie das Programm, und das Skript wird automatisch Vibrationssignale basierend auf dem REBA-Score senden.
+
+##### Anforderungen
+- Unity
+- Ein Gerät, das in der Lage ist, die Vibration zu interpretieren (z.B. Arduino)
+- Konfigurierte IP-Adresse und Port für die Kommunikation mit dem Vibrationsgerät
+#### Kalibrierung 

@@ -52,8 +52,9 @@ Weitere spezifische Anweisungen und Informationen finden Sie in den jeweiligen U
 
 - Patricia Bombik
 - Pouya Nikbakhsh
-- 
+- Albin Hoti
 
 ## Lizenz
 
 Dieses Projekt ist unter der [MIT-Lizenz](https://opensource.org/licenses/MIT) lizenziert. Weitere Informationen finden Sie in der [`LICENSE`](LICENSE)-Datei.
+## Vibration

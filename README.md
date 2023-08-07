@@ -94,7 +94,7 @@ Fügen Sie das Skript einer Unity-Komponente hinzu und konfigurieren Sie die Ein
 Das AutoREBA-Projekt zielt darauf ab, durch den Einsatz von Mixed Reality eine verbesserte Haltungsergonomie zu erzielen. Ein Schlüsselinstrument zur Kommunikation der Körperhaltung des Benutzers ist das visuelle Feedback.
 
 ### Überblick
-Das `VisualFeedback`-Skript bietet dem Benutzer visuelle Hinweise zu seinem aktuellen REBA-Score. Es nutzt verschiedene visuelle Mechanismen, von Balkendiagrammen bis hin zu SVG-Bildern und Textanzeigen, die alle in Echtzeit aktualisiert werden, je nach aktuellem REBA-Score des Benutzers.
+Das `VisualFeedback`-Skript bietet dem Benutzer visuelle Hinweise zu seinem aktuellen REBA-Score. Es nutzt verschiedene visuelle Mechanismen, von Balken bis hin zu SVG-Bildern und Textanzeigen, die alle in Echtzeit aktualisiert werden, je nach aktuellem REBA-Score des Benutzers.
 
 ### SELF-ASSESSMENT MANIKIN (SAM)
 
@@ -134,7 +134,7 @@ Je nach REBA-Score wird dem Benutzer eine entsprechende Nachricht angezeigt:
 
 #### ExtraImage
 
-Mit der Hauptfunktion `ExtraImage` können Benutzer ihr eigenes Bild anstelle der SAM-Bilder verwenden. Es ist zu beachten, dass es für jede Hauptfunktion eine Option gibt, die diese Funktion deaktiviert und sie auf dem Bildschirm unsichtbar macht.
+Mit der Hauptfunktion `ExtraImage` können Benutzer ihr eigenes Bild anstelle der SAM-Bilder verwenden.
 
 ### Hauptfunktionen
 
@@ -145,7 +145,8 @@ Mit der Hauptfunktion `ExtraImage` können Benutzer ihr eigenes Bild anstelle de
 - **RebaScoreText** und **RebaScoreNumber**: Textuelle Rückmeldungen, die den aktuellen REBA-Score und zugehörige Informationen präsentieren.
 
 - **ExtraImage**: Eine Funktion, mit der Benutzer ihre eigenen Bilder anstelle der SAM-Bilder verwenden können.
-Jede dieser Funktionen kann über das Unity-Interface aktiviert oder deaktiviert werden.
+
+Es ist zu beachten, dass jede Hauptfunktion über das Unity-Interface **aktiviert** oder **deaktiviert** werden kann.
 
 ### Einrichtung und Verwendung
 
